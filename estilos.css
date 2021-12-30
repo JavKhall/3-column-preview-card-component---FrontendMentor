@@ -1,0 +1,155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+/*
+font-family: 'Lexend Deca', sans-serif;
+font-family: 'Big Shoulders Display', cursive;
+*/
+
+:root {
+	--BrightOrange: hsl(31, 77%, 52%);
+	--DarkCyan: hsl(184, 100%, 22%);
+	--VeryDarkCyan: hsl(179, 100%, 13%);
+	--TransparentWhite: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+	--VeryLightGray: hsl(0, 0%, 95%); /*background, headings, buttons*/
+}
+
+body {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--VeryLightGray);
+}
+
+/** Configuracion del contenedor de las tarjetas */
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 325px;
+	margin: auto;
+	/* grid-template-rows: 3; */
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+/** Configuracion del cada terjeta */
+.card {
+	display: flex;
+	flex-direction: column;
+	height: 442px;
+	width: 100%;
+	font-family: 'Lexend Deca', sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+}
+
+.card img {
+	display: flex;
+	margin: 48px 0px 21px 50px;
+	height: 40px;
+}
+
+.card h1 {
+	margin: 21px 50px 20px 50px;
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 36px;
+	color: var(--VeryLightGray)
+}
+
+.card p {
+	margin: 20px 50px 16px 50px;
+	color: var(--TransparentWhite);
+}
+
+/** Color de fondo de la tarjetas y hover de la tarjeta de Sedans*/
+.card-sedans {
+	background-color: var(--BrightOrange);
+}
+.card-sedans .button {
+	color: var(--BrightOrange);
+}
+
+.card-sedans .button:hover{
+	border: 2px solid white;
+	background-color: var(--BrightOrange);
+	color: var(--TransparentWhite);
+}
+
+/** Color de fondo de la tarjetas y hover de la tarjeta de Suvs*/
+.card-suvs {
+	background-color: var(--DarkCyan);
+}
+.card-suvs .button {
+	color: var(--DarkCyan);
+}
+
+.card-suvs .button:hover{
+	border: 2px solid white;
+	background-color: var(--DarkCyan);
+	color: var(--TransparentWhite);
+}
+
+/** Color de fondo de la tarjetas y hover de la tarjeta de Luxury*/
+.card-luxury {
+	background-color: var(--VeryDarkCyan);
+}
+.card-luxury .button {
+	color: var(--VeryDarkCyan)
+}
+
+.card-luxury .button:hover{
+	border: 2px solid white;
+	background-color: var(--VeryDarkCyan);
+	color: var(--TransparentWhite);
+}
+
+
+/** Configuracion del boton del cada terjeta */
+.button {
+	display: flex;
+	margin: 16px 50px 48px 50px;
+	font-family: 'Lexend Deca', sans-serif;
+	font-size: 15px;
+	width: 148px;
+	height: 50px;
+	border-radius: 50px;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--VeryLightGray);
+	cursor: pointer;
+	transition: .3s ease-in-out;
+}
+
+
+
+/*
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+*/
+
+@media screen and (width > 720px) {
+	.container {
+		display: flex;
+		flex-direction: row;
+		height: 500px;
+		width: 924px;
+	}
+	
+	.card {
+		height: 100%;
+	}
+
+	.card p {
+		line-height: 1.5rem;
+	}
+
+	.button {
+		margin-top: 50px;
+		margin-bottom: 48px;
+		transition: .3s ease-in-out;
+	}
+}
